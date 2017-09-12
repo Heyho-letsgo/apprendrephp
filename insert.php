@@ -1,0 +1,34 @@
+<?php
+/* Attempt MySQL server connection. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+    
+    $servername = getenv('IP');
+    $username = getenv('C9_USER');
+    $password = "";
+    $database = "db";
+    $dbport = 3306;
+    $link = mysqli_connect($servername, $username, $password, $database);
+    $link->set_charset("utf8");
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+ 
+
+// Escape user inputs for security
+$first_name = mysqli_real_escape_string($link, $_REQUEST['first_name']);
+$last_name = mysqli_real_escape_string($link, $_REQUEST['last_name']);
+$email = mysqli_real_escape_string($link, $_REQUEST['email']);
+ 
+// attempt insert query execution
+$sql = "INSERT INTO persons (first_name, last_name, email) VALUES ('$first_name', '$last_name', '$email')";
+if(mysqli_query($link, $sql)){
+    echo "Records added successfully. <br>___________________<a href='form.php' rel='nofollow'>retour</a>";
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+    
+    // close connection
+mysqli_close($link);
+
+?>
