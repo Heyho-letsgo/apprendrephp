@@ -29,6 +29,7 @@
 
 $sql = "CREATE TABLE persons (
         id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+        civil VARCHAR(4),
         first_name VARCHAR(30) NOT NULL,
         last_name VARCHAR(30) NOT NULL,
         email VARCHAR(70) NOT NULL UNIQUE
@@ -43,7 +44,7 @@ if(mysqli_query($db, $sql)){
  
 
 // Close connection
-mysqli_close($db)
-    
+mysqli_close($db);
+
     
  ?>

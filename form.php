@@ -9,7 +9,19 @@
 <title>Add Record Form</title>
 </head>
 <body>
-<form action="insert.php" method="post">
+<form method="post" action="insert.php">
+    
+<p>    
+<select name="selectCivil">
+  <option value=""></option> 
+  <option value="6" selected>Mr.</option>
+  <option value="8">Mme.</option>
+</select>
+   </p> 
+    
+    
+
+    <p>
     <p>
         <label for="firstName">First Name:</label>
         <input type="text" name="first_name" id="firstName">
@@ -19,7 +31,7 @@
         <input type="text" name="last_name" id="lastName">
     </p>
     <p>
-        <label for="emailAddress">émail Address:</label>
+        <label for="emailAddress">Email Address:</label>
         <input type="text" name="email" id="emailAddress">
     </p>
     <input type="submit" value="Submit">
