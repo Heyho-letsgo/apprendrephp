@@ -6,20 +6,20 @@
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
 
 
-<title>Add Record Form</title>
+<title>Ajouter un enregistrement.</title>
 </head>
 <body>
 <form method="post" action="insert.php">
-    
-<p>    
+
+<p>
 <select name="selectCivil">
-  <option value=""></option> 
-  <option value="6" selected>Mr.</option>
-  <option value="8">Mme.</option>
+  <option value="" selected></option>
+  <option value="Mr." >Mr.</option>
+  <option value="Mme.">Mme.</option>
 </select>
-   </p> 
-    
-    
+   </p>
+
+
 
     <p>
     <p>
@@ -34,7 +34,7 @@
         <label for="emailAddress">Email Address:</label>
         <input type="text" name="email" id="emailAddress">
     </p>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Envoyer">
 </form>
 </body>
 </html>
