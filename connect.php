@@ -10,7 +10,7 @@
     $database = "db";
     $dbport = 3306;
 
-    
+
 
     // Create connection
     $db = new mysqli($servername, $username, $password, $database, $dbport);
@@ -19,15 +19,15 @@
     // Check connection
     if ($db->connect_error) {
         die("Connection failed: " . $db->connect_error);
-    } 
+    }
     echo "https://openclassrooms.com/courses/pour-aller-plus-loin-41/selectionner-une-valeur-ne-provenant-pas-d-une-table <br>";
     echo "Connected successfully (".$db->host_info.")";
-    
-    
-    
+
+
+
         // Attempt create table query execution
 
-$sql = "CREATE TABLE persons (
+$sql = "CREATE IF NOT EXISTS TABLE persons (
         id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
         civil VARCHAR(4),
         first_name VARCHAR(30) NOT NULL,
@@ -41,10 +41,10 @@ if(mysqli_query($db, $sql)){
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($db);
 }
- 
+
 
 // Close connection
 mysqli_close($db);
 
-    
+
  ?>

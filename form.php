@@ -4,12 +4,14 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link rel='stylesheet' type='text/css' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
 
 
 <title>Ajouter un enregistrement.</title>
 </head>
 <body>
-<form method="post" action="insert.php">
+<form method="post" action="insertIntoPersons.php">
 
 <p>
 <select name="selectCivil">

@@ -20,7 +20,7 @@ if($link === false){
 
 $civil = isset($_POST['selectCivil']) ? true : false; //toujours basé sur l'attribut name du select
 if($civil) {
-   $value = htmlentities($_POST['selectCivil'], ENT_QUOTES, "UTF-8"); //permet de protéger tout les caractères spéciaux
+   $value = htmlentities($_POST['selectCivil'], ENT_QUOTES, "UTF-8");//permet de protéger tout les caractères spéciaux
    //ensuite requête pour ajouter en base ...
 } else {
   echo "Select Civil is required";
@@ -40,7 +40,8 @@ $email = mysqli_real_escape_string($link, $_REQUEST['email']);
 // attempt insert query execution
 $sql = "INSERT INTO persons (first_name, last_name, email,civil) VALUES ('$first_name', '$last_name', '$email','$civil')";
 if(mysqli_query($link, $sql)){
-    echo "Records added successfully. <br>___________________<a href='form.php' rel='nofollow'>retour</a>";
+    echo "Records added successfully. <br>
+    ___________________<a href='form.php' rel='nofollow'>retour</a>";
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
