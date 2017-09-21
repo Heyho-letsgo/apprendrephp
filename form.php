@@ -42,7 +42,7 @@
         <input type="text"  class="form-control" name="email" id="emailAddress">
         </div>
       </div>
-    <input type="submit" value="Envoyer" class="btn btn-primary">
+    <input type="submit" value="Envoyer -> " class="btn btn-primary">
   </form>
 </div>
 </body>
